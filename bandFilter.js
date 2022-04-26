@@ -1,14 +1,19 @@
 
 const bandFilter = (toBeFiltered, lowLimit = 40, highLimit = 1000) => {
+  
+  if (toBeFiltered.length === 0) {
+    return "Error: No frequencies supplied";
+  }
+  
   const filteredBand = []
   
-  toBeFiltered.forEach(element => {
-    if (element < lowLimit) {
+  toBeFiltered.forEach(frequencies => {
+    if (frequencies < lowLimit) {
        filteredBand.push(lowLimit)
-      } else if (element > highLimit){
+      } else if (frequencies > highLimit){
         filteredBand.push(highLimit)
       } else {
-      filteredBand.push(element)
+      filteredBand.push(frequencies)
     }
   });
   

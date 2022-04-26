@@ -28,4 +28,8 @@ describe("BandFilter", () => {
   it("should change the lower and upper limit", () => {
     expect(bandFilter([30,60,1010,20,60],20,900)).toEqual([30,60,900,20,60]);
   });
+
+  it("should return an error if given an empty array", () => {
+    expect(bandFilter([])).toEqual("Error: No frequencies supplied");
+  });
 })

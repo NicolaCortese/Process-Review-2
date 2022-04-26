@@ -8,4 +8,8 @@ describe("BandFilter", () => {
   it("should change a value to the lower limit if < lower limit", () => {
     expect(bandFilter([35])).toEqual([40]);
   });
+
+  it("should change a value to the lower limit if < lower limit", () => {
+    expect(bandFilter([1010])).toEqual([1000]);
+  });
 })

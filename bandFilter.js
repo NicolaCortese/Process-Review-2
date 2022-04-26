@@ -2,7 +2,7 @@
 const bandFilter = (toBeFiltered, lowLimit = 40, highLimit = 1000) => {
   
   if (toBeFiltered.length === 0) {
-    return "Error: No frequencies supplied";
+    throw new Error("Error: No frequencies supplied");
   }
   
   const filteredBand = []

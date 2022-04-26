@@ -1,16 +1,15 @@
 
-const bandFilter = (toBeFiltered) => {
+const bandFilter = (toBeFiltered, lowLimit = 40, highLimit = 1000) => {
   const filteredBand = []
   
   toBeFiltered.forEach(element => {
-    if (element < 40) {
-       filteredBand.push(40)
-      } else if (element > 1000){
-        filteredBand.push(1000)
+    if (element < lowLimit) {
+       filteredBand.push(lowLimit)
+      } else if (element > highLimit){
+        filteredBand.push(highLimit)
       } else {
       filteredBand.push(element)
     }
-    
   });
   
   return filteredBand;

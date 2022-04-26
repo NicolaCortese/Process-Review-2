@@ -24,4 +24,8 @@ describe("BandFilter", () => {
   it("should iterate through an array of 5 elements, changing 3 elements", () => {
     expect(bandFilter([30,60,1010,20,60])).toEqual([40,60,1000,40,60]);
   });
+
+  it("should change the lower and upper limit", () => {
+    expect(bandFilter([30,60,1010,20,60],20,900)).toEqual([30,60,900,20,60]);
+  });
 })

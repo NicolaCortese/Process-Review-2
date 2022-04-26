@@ -20,4 +20,8 @@ describe("BandFilter", () => {
   it("should iterate through an array of 2 elements, changing one element", () => {
     expect(bandFilter([30,60])).toEqual([40,60]);
   });
+
+  it("should iterate through an array of 5 elements, changing 3 elements", () => {
+    expect(bandFilter([30,60,1010,20,60])).toEqual([40,60,1000,40,60]);
+  });
 })

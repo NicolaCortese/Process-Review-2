@@ -33,8 +33,9 @@ describe("BandFilter", () => {
     expect(() => { bandFilter([]) }).toThrow("Error: No frequencies supplied")
   });
 
+  xit("should return an error array contains data types other than integers", () => {
+    expect(() => { bandFilter(["hello"]) }).toThrow("Error wrong input type supplied")
+  });
 
-  // it("should return an error if array contains data types other than integers", () => {
-  //   expect(bandFilter(["hello"])).toEqual("Error: Wrong input type");
-  // });
+
 })

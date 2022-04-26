@@ -7,13 +7,16 @@ const bandFilter = (toBeFiltered, lowLimit = 40, highLimit = 1000) => {
   
   const filteredBand = []
   
-  toBeFiltered.forEach(frequencies => {
-    if (frequencies < lowLimit) {
+  toBeFiltered.forEach(frequency => {
+    // if (!frequency.isInteger()) {
+    //   throw new Error("Error wrong input type supplied");
+    // }
+    if (frequency < lowLimit) {
        filteredBand.push(lowLimit)
-      } else if (frequencies > highLimit){
+      } else if (frequency > highLimit){
         filteredBand.push(highLimit)
       } else {
-      filteredBand.push(frequencies)
+      filteredBand.push(frequency)
     }
   });
   

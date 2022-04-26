@@ -9,7 +9,7 @@ describe("BandFilter", () => {
     expect(bandFilter([35])).toEqual([40]);
   });
 
-  it("should change a value to the lower limit if < lower limit", () => {
+  it("should change a value to the upper limit if > upper limit", () => {
     expect(bandFilter([1010])).toEqual([1000]);
   });
 })
